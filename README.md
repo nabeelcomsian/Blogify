@@ -1,4 +1,4 @@
-Blogify - Your Blogging Companion
+Blogify - Your Blogging Companion   (Feature first clean Artitecture Approuch  (Folder type))
 
 Blogify is a versatile blogging application designed to enhance your writing experience. This project enables users to effortlessly add and manage their blogs, with seamless functionality in both online and offline modes.
 
