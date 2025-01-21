@@ -4,24 +4,23 @@ import 'package:blogify/Features/Auth/presentation/widgets/auth_field.dart';
 import 'package:blogify/Features/Auth/presentation/widgets/auth_gradient_button.dart';
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatefulWidget {
-  const SignupPage({super.key});
+class SigninPage extends StatefulWidget {
+  const SigninPage({super.key});
 
   @override
-  State<SignupPage> createState() => _SignupPageState();
+  State<SigninPage> createState() => _SigninPageState();
 }
 
-class _SignupPageState extends State<SignupPage> {
+class _SigninPageState extends State<SigninPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController nameController = TextEditingController();
+
   final formKey = GlobalKey<FormState>();
 
   @override
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
-    nameController.dispose();
     super.dispose();
   }
 
@@ -47,13 +46,6 @@ class _SignupPageState extends State<SignupPage> {
                   height: 30,
                 ),
                 AuthField(
-                  hintText: 'Name',
-                  controller: nameController,
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                AuthField(
                   hintText: 'Email',
                   controller: emailController,
                 ),
@@ -69,16 +61,16 @@ class _SignupPageState extends State<SignupPage> {
                   height: 20,
                 ),
                 const AuthGradientButton(
-                  buttonText: 'Sign Up',
+                  buttonText: 'Sign In',
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, AppRoutes.signin),
+                  onTap: () => Navigator.pushNamed(context, AppRoutes.signup),
                   child: RichText(
                     text: TextSpan(
-                        text: 'Already have an account ',
+                        text: 'Don\'t have an account ',
                         style: Theme.of(context).textTheme.titleMedium,
                         children: [
                           TextSpan(
