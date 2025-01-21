@@ -39,7 +39,7 @@ class _SigninPageState extends State<SigninPage> {
                   height: 150,
                 ),
                 const Text(
-                  "Sign Up",
+                  "Sign In",
                   style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
@@ -74,7 +74,7 @@ class _SigninPageState extends State<SigninPage> {
                         style: Theme.of(context).textTheme.titleMedium,
                         children: [
                           TextSpan(
-                            text: 'Sign In',
+                            text: 'Sign Up',
                             style: Theme.of(context)
                                 .textTheme
                                 .titleMedium

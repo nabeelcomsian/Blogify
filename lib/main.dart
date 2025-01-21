@@ -1,5 +1,7 @@
+import 'package:blogify/Core/App_Routes.dart';
 import 'package:blogify/Core/Theme/app_theme.dart';
 import 'package:blogify/Features/Auth/presentation/pages/Signin_page.dart';
+import 'package:blogify/Features/Auth/presentation/pages/Signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkMode,
-      home: const SigninPage(),
+      onGenerateRoute: AppRoutes.generateRoute,
+      home: const SignupPage(),
     );
   }
 }
