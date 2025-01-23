@@ -1,10 +1,14 @@
 import 'package:blogify/Core/App_Routes.dart';
+import 'package:blogify/Core/Secrets/app_secrets.dart';
 import 'package:blogify/Core/Theme/app_theme.dart';
-import 'package:blogify/Features/Auth/presentation/pages/Signin_page.dart';
 import 'package:blogify/Features/Auth/presentation/pages/Signup_page.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final supaBase = await Supabase.initialize(
+      url: AppSecrets.supaBaseAppUrl, anonKey: AppSecrets.supaBaseAnonkey);
   runApp(const MyApp());
 }
 
